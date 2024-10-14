@@ -6,8 +6,6 @@ import datetime as dt
 import smtplib
 import json
 
-
-
 def starting_questions():
     print("Welcome to Abdullah's Flight Club")
     user_choice = input("Do you want to add your email address to the mailing list? (Y/N): ").lower()
