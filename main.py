@@ -27,7 +27,7 @@ def starting_questions():
             }
             body = {"formResponses1": ex}
             response1 = requests.post(
-                url="https://api.sheety.co/7687b746f7aa3562a45758e38efe0c56/flightHunterUserList/formResponses1",
+                url="https://api.sheety.co/APIKEY/flightHunterUserList/formResponses1",
                 headers=headers1,
                 json=body
             )
@@ -44,7 +44,7 @@ def send_mails(my_message: str):
     my_password = os.environ["MY_PASSWORD"]
 
 
-    mail_list = "https://api.sheety.co/7687b746f7aa3562a45758e38efe0c56/flightHunterUserList/formResponses1"
+    mail_list = "https://api.sheety.co/APIKEY/flightHunterUserList/formResponses1"
     sheet_response = requests.get(url=mail_list)
 
     sheet_data_email = sheet_response.json()["formResponses1"]
@@ -93,7 +93,7 @@ for a in sheet_data:
     }
 
     headers = {
-        "x-rapidapi-key": "4103f73080msh91a9a41eaedc05cp151552jsncfbd53686894",
+        "x-rapidapi-key": "APIKEY",
         "x-rapidapi-host": "tripadvisor16.p.rapidapi.com"
     }
 
